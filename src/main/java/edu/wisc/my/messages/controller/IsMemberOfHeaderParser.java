@@ -15,7 +15,7 @@ public class IsMemberOfHeaderParser {
   public Set<String> groupsFromHeaderValue(String headerValue) {
 
     if (null == headerValue) {
-      return Collections.EMPTY_SET;
+      return Collections.emptySet();
     }
 
     Set<String> userGroups = new HashSet<>();
