@@ -2,9 +2,9 @@ package edu.wisc.my.messages.controller;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
-import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.any;
-import static org.mockito.Mockito.anyString;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -68,6 +68,7 @@ public class MessagesControllerUnitTest {
     controller.setMessagesService(mockService);
 
     HttpServletRequest mockRequest = mock(HttpServletRequest.class);
+    when(mockRequest.getHeader("isMemberOf")).thenReturn("someGroup;someOtherGroup;yetAnotherGroup");
 
     List<Message> messages = new ArrayList<>();
 
