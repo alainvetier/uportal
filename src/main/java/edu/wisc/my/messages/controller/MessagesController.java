@@ -63,7 +63,7 @@ public class MessagesController {
    */
   @GetMapping("/admin/allMessages")
   public Map<String, Object> allMessages() {
-    Map<String, Object> responseMap = new HashMap<String, Object>();
+    Map<String, Object> responseMap = new HashMap<>();
     responseMap.put("messages", messagesService.allMessages());
 
     return responseMap;

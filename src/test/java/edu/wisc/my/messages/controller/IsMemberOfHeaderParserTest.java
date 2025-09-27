@@ -11,7 +11,7 @@ public class IsMemberOfHeaderParserTest {
 
   @Test
   public void parsesNullAsEmptySet() {
-    assertEquals(Collections.EMPTY_SET, new IsMemberOfHeaderParser().groupsFromHeaderValue(null));
+    assertEquals(Collections.emptySet(), new IsMemberOfHeaderParser().groupsFromHeaderValue(null));
   }
 
   @Test
